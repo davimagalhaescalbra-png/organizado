@@ -6,7 +6,7 @@
     <title>Agenda do Davi</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             display: flex;
@@ -15,7 +15,7 @@
             min-height: 100vh;
         }
         header {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             width: 100%;
             padding: 20px 0;
@@ -23,6 +23,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h1 { margin: 0; font-size: 24px; }
+        
         .container {
             width: 90%;
             max-width: 800px;
@@ -32,11 +33,15 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
+
+        /* Área da Agenda */
         .calendar-wrapper {
             position: relative;
-            padding-bottom: 75%; /* Ajusta altura para celular */
+            padding-bottom: 75%; 
             height: 0;
             overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #ddd;
         }
         .calendar-wrapper iframe {
             position: absolute;
@@ -46,6 +51,29 @@
             height: 100%;
             border: 0;
         }
+
+        /* Botão de Adicionar */
+        .btn-add {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            margin: 20px auto 0 auto; /* Centralizado */
+            padding: 15px;
+            background-color: #28a745; /* Verde */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-add:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
         .footer {
             margin-top: 30px;
             color: #666;
@@ -64,7 +92,11 @@
         <div class="calendar-wrapper">
             <iframe src="https://calendar.google.com/calendar/embed?src=davimagalhaes.calbra%40gmail.com&ctz=America%2FSao_Paulo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
-        </div>
+
+        <a href="https://calendar.google.com/calendar/r/eventedit" target="_blank" class="btn-add">
+            ➕ Adicionar Novo Evento
+        </a>
+    </div>
 
     <div class="footer">
         Painel Pessoal - Educação Física
